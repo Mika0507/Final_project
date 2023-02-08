@@ -8,12 +8,12 @@
     </div>
     <NewTask />
     <h1>Tasks:</h1>
-    <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
+    <TaskItem v-for="task in tasks" :key="task.id" :task="task" @task-complete="completeTaskSupabase" @edit-child="editTaskSupabase"/>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onUpdated } from 'vue';
 import { useTaskStore } from "../stores/task";
 import { useRouter } from 'vue-router';
 import Nav from '../components/Nav.vue';
@@ -31,7 +31,32 @@ const getTasks = async() => {
 };
 
 getTasks();
+onUpdated(() => {
 
+  getTasks();
+})
+
+// funcion para completar tarea conectándose con supabase
+const completeTaskSupabase = async(taskObject) => {
+  console.log("click");
+  console.log(taskObject);
+  console.log(taskObject.id);
+  console.log(taskObject.is_complete);
+  let changeTaskBooleanValue = !taskObject.is_complete;
+  let taskId = taskObject.id;
+  //console.log(changeTaskBooleanValue);
+
+  await taskStore.completeTask(changeTaskBooleanValue, taskId)
+
+}
+// funcion para editar tarea conectándose con supabase
+const editTaskSupabase = async(editTaskObject) => {
+  console.log("click");
+  console.log(editTaskObject);
+  await taskStore.editTaskSupabase(editTaskObject.title, editTaskObject.id, editTaskObject.description)
+
+
+} 
 </script>
 
 <style></style>

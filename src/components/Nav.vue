@@ -34,6 +34,7 @@ import { useUserStore } from "../stores/user";
 import { computed } from "vue";
 import { useRouter } from "vue-router";
 import { ref } from 'vue';
+// import { PersonalRouter } from './PersonalRouter.vue'
 
 //constant to save a variable that will hold the use router method
 const route = "/";
@@ -53,6 +54,10 @@ const signOut = async () => {
   try{
     // call the user store and send the users info to backend to signOut
     // then redirect user to the homeView
+
+     await useUserStore().signOut();
+      // redirects user to the homeView
+      redirect.push({ path: "/auth/login" });
   } catch (error) {}
 };
 
