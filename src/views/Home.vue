@@ -54,8 +54,6 @@ const editTaskSupabase = async(editTaskObject) => {
   console.log("click");
   console.log(editTaskObject);
   await taskStore.editTaskSupabase(editTaskObject.title, editTaskObject.id, editTaskObject.description)
-
-
 } 
 </script>
 
