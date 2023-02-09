@@ -11,7 +11,7 @@
       <!-- Email -->
       <div class="parent-container-regular-input">
         <label for="email" class="input-field-label">Email</label>
-        <input type="email" id="email" v-model="email">
+        <input type="email" id="email" v-model="email" placeholder="example@gmail.com">
       </div>
       <!-- Password -->
       <div class="parent-container-input-rigt-button">
@@ -29,7 +29,7 @@
         </div>
       </div>
       <!-- Confirm password -->
-       <div class="parent-container-input-rigt-button">
+      <div class="parent-container-input-rigt-button">
         <label class="input-field-label" for="confirm-password">Confirm Password</label>
         <div class="input-button-right-container">
           <input
@@ -42,6 +42,15 @@
           />
           <button class="input-button">show</button>
         </div>
+        <button class="button" type="submit">Sign Up</button>
+        <p>
+          Have an account?
+          <PersonalRouter
+            :route="route"
+            :buttonText="buttonText"
+            class="sign-up-link"
+          />
+        </p>
       </div>
     </form>
 

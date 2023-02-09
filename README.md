@@ -71,12 +71,21 @@ El día de hoy lo he dedicado en gran medida a la creación de la lógica de los
 ***
 ###### Jueves 09, Febrero 2023
 ***
-- [] CSS de la página Sign In/ Sign Up.
-- [] CSS del Home.
-- [] Lógica del modal de confirmación para eliminar.
+- [x] CSS de la página Sign In.
+- [] CSS Sign up.
+- [x] Lógica del modal de confirmación para eliminar.
   
-Hoy planeo dedicarme a hacer el CSS de las pantallas del sign in y del home. Si da tiempo haré la lógica del modal.
+Hoy planeo dedicarme a hacer el CSS de las pantallas del sign in y del home. Si da tiempo haré la lógica del modal. Hoy he conseguido hacer la lógica del modal y terminar el css de la página del Sign In, pero no he conseguido terminar el del sign up.
 
+#### Day Three
+***
+***
+###### Viernes 10, Febrero 2023
+***
+- [] CSS Sign up.
+- [] CSS del Home.
+- [] Tabla del profile.
+- [] lógica de la página del profile.
 
 ## Collaboration
 ***
