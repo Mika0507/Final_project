@@ -2,10 +2,36 @@
  
   <template>
   <div class="container">
-    <h3 class="header-title">Log In to ToDo App</h3>
-    <p class="header-subtitle">Header subtitle</p>
+    <h3 class="header-title">Welcome back! </h3>
+    <p class="header-subtitle">Please enter your details</p>
 
-    <form class="sign-in-form" @submit.prevent="signIn">
+     <form @submit.prevent="signIn" class="form-component">
+      <!-- Email -->
+      <div class="parent-container-regular-input">
+        <label for="email" class="input-field-label">Email</label>
+        <input class="input-regular-type" type="email" id="email" v-model="email">
+      </div>
+      <!-- Password -->
+      <div class="parent-container-input-rigt-button">
+        <label class="input-field-label" for="password">Password</label>
+        
+        <lottie-player v-if="showPassword" src="https://assets6.lottiefiles.com/packages/lf20_4yofoa5q.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop autoplay></lottie-player>
+        <div class="input-button-right-container">
+          <input
+            :type="showPassword ? 'text' : 'password'"
+            class="input-button-right"
+            placeholder="**************"
+            required
+            id="password"
+            v-model="password"
+          />
+          <button @click.prevent="toggleShowPassword" class="input-button">show</button>
+        </div>
+      </div>
+     <button class="button" type="submit">Log In</button>
+    </form>
+
+    <!-- <form class="sign-in-form" @submit.prevent="signIn">
       <label class="input-field-label">E-mail</label>
       <input
         type="email"
@@ -28,9 +54,20 @@
         />
         <button class="button-password" @click.prevent="toggleShowPassword">Show</button>
       </div>
+      <div class="input-regular-type"></div>
+      <div class="input-button-right-container">
+        <input 
+        :type="showPassword ? 'text' : 'password'"
+        class="input-button-right"
+        placeholder="**************"
+        required
+        v-model="password"
+        >
+        <button class="input-button">show</button>
+      </div>
       
       <button class="button" type="submit">Log In</button>
-    </form>
+    </form> -->
 
     <p>
       Dont have an account?
@@ -90,6 +127,9 @@ const showPassword = ref(false);
 
 const toggleShowPassword = () => {
   showPassword.value = !showPassword.value
+  setTimeout(() => {
+    showPassword.value = !showPassword.value
+  }, 3000)
 }
 </script>
 

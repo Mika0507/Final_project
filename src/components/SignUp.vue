@@ -1,16 +1,53 @@
 <template>
   <div class="container">
-
     <div class="header">
       <div class="header-description">
-        <h3 class="header-title">Register to ToDo App</h3>
+        <h3 class="header-title">Create an account</h3>
         <p class="header-subtitle">Start organizing your tasks!</p>
       </div>
     </div>
 
-    <form @submit.prevent="signUp" class="form-sign-in">
+    <form @submit.prevent="signUp" class="form-component">
+      <!-- Email -->
+      <div class="parent-container-regular-input">
+        <label for="email" class="input-field-label">Email</label>
+        <input type="email" id="email" v-model="email">
+      </div>
+      <!-- Password -->
+      <div class="parent-container-input-rigt-button">
+        <label class="input-field-label" for="password">Password</label>
+        <div class="input-button-right-container">
+          <input
+            :type="showPassword ? 'text' : 'password'"
+            class="input-button-right"
+            placeholder="**************"
+            required
+            id="password"
+            v-model="password"
+          />
+          <button class="input-button">show</button>
+        </div>
+      </div>
+      <!-- Confirm password -->
+       <div class="parent-container-input-rigt-button">
+        <label class="input-field-label" for="confirm-password">Confirm Password</label>
+        <div class="input-button-right-container">
+          <input
+            :type="showPassword ? 'text' : 'password'"
+            class="input-button-right"
+            placeholder="**************"
+            required
+            id="confirm-password"
+            v-model="confirmPassword"
+          />
+          <button class="input-button">show</button>
+        </div>
+      </div>
+    </form>
+
+    <!-- <form @submit.prevent="signUp" class="form-sign-in">
       <div class="form">
-        <div class="form-input">
+        <div class="form-input-email">
           <label class="input-field-label">E-mail</label>
           <input
             type="email"
@@ -21,7 +58,7 @@
             required
           />
         </div>
-        <div class="form-input">
+        <div class="form-input-password">
           <label class="input-field-label">Password</label>
           <input
             type="password"
@@ -31,8 +68,9 @@
             v-model="password"
             required
           />
+          <button class="button-password-singup" @click.prevent="toggleShowPassword">Show</button>
         </div>
-        <div class="form-input">
+        <div class="form-input-confirmpassword">
           <label class="input-field-label">Confirm password</label>
           <input
             type="password"
@@ -42,7 +80,9 @@
             v-model="confirmPassword"
             required
           />
+          <button class="button-password-singup" @click.prevent="toggleShowPassword">Show</button>
         </div>
+        
         <button class="button" type="submit">Sign Up</button>
         <p>
           Have an account?
@@ -53,9 +93,9 @@
           />
         </p>
       </div>
-    </form>
+    </form> -->
 
-    <div v-show="errorMsg">{{errorMsg}}</div>
+    <div v-show="errorMsg">{{ errorMsg }}</div>
   </div>
 </template>
 
