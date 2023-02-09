@@ -1,36 +1,41 @@
 <!-- COMPONENTE BOILERPLATE -->
  
   <template>
-
   <div class="container">
     <h3 class="header-title">Log In to ToDo App</h3>
     <p class="header-subtitle">Header subtitle</p>
 
     <form class="sign-in-form" @submit.prevent="signIn">
       <label class="input-field-label">E-mail</label>
-          <input
-            type="email"
-            class="input-field"
-            placeholder="example@gmail.com"
-            id="email"
-            v-model="email"
-            required
-          />
-          <br>
+      <input
+        type="email"
+        class="input-field"
+        placeholder="example@gmail.com"
+        id="email"
+        v-model="email"
+        required
+      />
+      <br />
       <label class="input-field-label">Password</label>
-          <input
-            type="password"
-            class="input-field"
-            placeholder="**********"
-            id="password"
-            v-model="password"
-            required
-          />
-          <button class="button" type="submit">Log In</button>
+      <input
+        type="password"
+        class="input-field"
+        placeholder="**********"
+        id="password"
+        v-model="password"
+        required
+      />
     </form>
-    <p>Dont have an account? <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p>
+    <button class="button" type="submit">Log In</button>
+    <p>
+      Dont have an account?
+      <PersonalRouter
+        :route="route"
+        :buttonText="buttonText"
+        class="sign-up-link"
+      />
+    </p>
   </div>
-
 </template>
 
 <script setup>
@@ -57,8 +62,8 @@ const errorMsg = ref("");
 // Arrow function to Signin user to supaBase
 const signIn = async () => {
   if (password.value === password.value) {
-  try {
-    console.log("click");
+    try {
+      console.log("click");
       // calls the user store and send the users info to backend to logIn
       await useUserStore().signIn(email.value, password.value);
       // redirects user to the homeView

@@ -27,7 +27,7 @@ export const useTaskStore = defineStore("tasks", () => {
       },
     ]);
   };
-  // completar tarea de supabase -apuntando al valor booleano in_complete
+  // completar tarea de supabase -apuntando al valor booleano is_complete
 
   // const { data, error } = await supabase
   // .from('tasks')
