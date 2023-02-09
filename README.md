@@ -28,7 +28,7 @@ Este proyecto, que nombraremos TaskTracker, se trata de una página web al que i
     - Change image profile.
 
 ### Screenshot
-![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+![Image text]()
 
 
 <!-- La información general del proyecto es importante para hacerse una idea de este más allá de la breve explicación. Markdown permite también insertar gráficos, capturas de pantalla u otras imágenes en la documentación. Para esto, basta con escribir una palabra descriptiva entre corchetes, seguida del URL de la imagen entre corchetes (sin espacios intercalados). Delante de este, pon un signo de exclamación para que Markdown lo interprete como un archivo de imagen. -->
@@ -52,9 +52,10 @@ Se pueden insertar enlaces en cualquier ubicación del archivo readme.md. El pro
 
 ## Calendar
 #### Day One
-
+***
+***
 ###### Miércoles 08, Febrero 2023
-
+***
 - [x] Lógica Sign In.
 - [x] Lógica Sign Up.
 - [x] Lógica Log out.
@@ -63,7 +64,18 @@ Se pueden insertar enlaces en cualquier ubicación del archivo readme.md. El pro
 - [x] Lógica Edit Tasks.
 - [] CSS de la página Sign In/ Sign Up.
   
-El día de hoy lo he dedicado en gran medida a la creación de la lógica de los componentes de regitro de usuario y de la creación de tareas. 
+El día de hoy lo he dedicado en gran medida a la creación de la lógica de los componentes de registro de usuario y de la creación de tareas. 
+
+#### Day Two
+***
+***
+###### Jueves 09, Febrero 2023
+***
+- [] CSS de la página Sign In/ Sign Up.
+- [] CSS del Home.
+- [] Lógica del modal de confirmación para eliminar.
+  
+Hoy planeo dedicarme a hacer el CSS de las pantallas del sign in y del home. Si da tiempo haré la lógica del modal.
 
 
 ## Collaboration
