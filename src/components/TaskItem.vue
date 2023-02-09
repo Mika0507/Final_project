@@ -4,7 +4,14 @@
       {{ task.title }}
     </h3>
     <p>{{  task.description }}</p>
-    <button @click="deleteTask">Delete {{ task.title }}</button>
+    <button @click="showModal = true">Delete {{ task.title }}</button>
+    <!-- El modal emergente -->
+    <div class="modal" v-if="showModal">
+      <h2>Are you sure??</h2>
+      <p>No hay vuelta atrás</p>
+      <button @click="deleteTask">Yes, I am</button>
+      <button @click="showModal=false">NO! Cancel, cancel</button>
+    </div>
     <button @click="completeTask">Completed {{ task.title }}</button>
   </div>
   <button @click="showInput">Edit</button>
@@ -70,7 +77,21 @@ const deleteTask = async () => {
 };
 </script>
 
-<style></style>
+<style scoped>
+
+  .modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    width: 20em;
+    height: 10em;
+    background: rgb(175, 175, 246);
+  }
+
+</style>
+
+
 
 <!--
 **Hints**

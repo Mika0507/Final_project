@@ -17,16 +17,21 @@
       />
       <br />
       <label class="input-field-label">Password</label>
-      <input
-        type="password"
-        class="input-field"
-        placeholder="**********"
-        id="password"
-        v-model="password"
-        required
-      />
+      <div class="input-password">
+        <input
+          :type="showPassword ? 'text' : 'password'"
+          class="input-field"
+          placeholder="**********"
+          id="password"
+          v-model="password"
+          required
+        />
+        <button class="button-password" @click.prevent="toggleShowPassword">Show</button>
+      </div>
+      
+      <button class="button" type="submit">Log In</button>
     </form>
-    <button class="button" type="submit">Log In</button>
+
     <p>
       Dont have an account?
       <PersonalRouter
@@ -80,6 +85,12 @@ const signIn = async () => {
   }
   errorMsg.value = "error";
 };
+
+const showPassword = ref(false);
+
+const toggleShowPassword = () => {
+  showPassword.value = !showPassword.value
+}
 </script>
 
 <style></style>

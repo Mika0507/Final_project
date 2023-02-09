@@ -42,6 +42,10 @@ export const useTaskStore = defineStore("tasks", () => {
 
   }
 
+  // subir imagenes a la storage de supabase
+  // let { data: tasks, error } = await supabase.storage.from('avatars')
+  
+
   // editar tarea en supabase
   const editTaskSupabase = async (title, id, description) => {
     
