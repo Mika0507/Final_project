@@ -13,7 +13,7 @@
         />
       </div>
       <div>
-        <input class="input-field-add-task"
+        <input class="input-field-add-task-description"
           type="text"
           placeholder="Add a Task Description"
           v-model="description"

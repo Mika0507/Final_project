@@ -3,21 +3,35 @@
     <h3 :class="props.task.is_complete ? 'class-one' : 'class-two'">
       {{ task.title }}
     </h3>
-    <p>{{  task.description }}</p>
-    <button class="button-class-edits-tasks delete" @click="showModal = true"></button>
-    <!-- El modal emergente -->
-    <div class="modal" v-if="showModal">
-      <h2>Are you sure??</h2>
-      <p>No hay vuelta atrás</p>
-      <button @click="deleteTask">Yes, I am</button>
-      <button class="button-cancel-delete" @click="showModal=false">NO! Cancel, cancel</button>
-    </div>
-    <button class="button-class-edits-tasks completed" @click="completeTask"></button>
-    <button class="button-class-edits-tasks edit" @click="showInput"></button>
-     <div class="modal-task-edit" v-if="inputContainer">
-      <input type="text" v-model="currentTaskTitle" />
-      <input type="text" v-model="currentTaskDescription" />
-      <button class="button-class-edits-tasks edit-task" @click="editTask">Edit Task</button>
+    <p :class="props.task.is_complete ? 'class-one' : 'class-two'">
+      {{ task.description }}
+    </p>
+    <div class="content-buttons">
+      <button
+        class="button-class-edits-tasks delete"
+        @click="showModal = true"
+      ></button>
+      <!-- El modal emergente -->
+      <div class="modal" v-if="showModal">
+        <h2>Are you sure??</h2>
+        <p>No hay vuelta atrás</p>
+        <button @click="deleteTask">Yes, I am</button>
+        <button class="button-cancel-delete" @click="showModal = false">
+          NO! Cancel, cancel
+        </button>
+      </div>
+      <button
+        class="button-class-edits-tasks completed"
+        @click="completeTask"
+      ></button>
+      <button class="button-class-edits-tasks edit" @click="showInput"></button>
+      <div class="modal-task-edit" v-if="inputContainer">
+        <input type="text" v-model="currentTaskTitle" />
+        <input type="text" v-model="currentTaskDescription" />
+        <button class="button-class-edits-tasks edit-task" @click="editTask">
+          Edit Task
+        </button>
+      </div>
     </div>
   </div>
   
@@ -69,6 +83,8 @@ const editTask = () => {
       id: props.task.id,
     };
     emit("editChild", newTaskEdited);
+
+    inputContainer.value = !inputContainer.value;
   }
 };
 
@@ -80,12 +96,10 @@ const deleteTask = async () => {
 const showModal = ref(false);
 const showModalToggle = () => {
   showModal.value = !showModal.value;
-}
+};
 </script>
 
 <style scoped>
-
-  
 </style>
 
 

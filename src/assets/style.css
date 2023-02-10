@@ -204,6 +204,13 @@ h2 {
   width: 100%;
   height: 3rem;
   padding-left: 1rem;
+  outline: none;
+}
+.input-field-add-task-description{
+  width: 100%;
+  height: 6rem;
+  padding-left: 1rem;
+  outline: none;
 }
 .section-embrace-tasks {
   display: flex;
@@ -213,13 +220,19 @@ h2 {
 }
 .container-new-tasks {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   gap: 2rem;
   width: 30rem;
   padding: 2rem;
   box-shadow: -1px -1px 6px 0 #f1e3d3ff, 4px 4px 16px 2px #8e7dbeff;
+}
+.content-buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
 }
 .button-class-edits-tasks {
   width: 4rem;
@@ -289,26 +302,36 @@ h2 {
 }
 .modal button:hover, .modal-task-edit button:hover{
   background-color: var(--cambridge-blue);
-  color: var(--colorBlack);
+  color: var(--colorWhite);
 }
 .modal .button-cancel-delete:hover{
   background-color: var(--puce);
-  color: var(--colorBlack);
+  color: var(--colorWhite);
 }
 /* ventana emergente de edición de tarea */
 .modal-task-edit{
-  background-color: aquamarine;
+  background-color: var(--tropical-indigo);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   width: 30rem;
   height: 15rem;
-  padding: 1rem;
+  padding-top: 1rem;
 }
 .modal-task-edit input{
   width: 80%;
   height: 3rem;
+  padding-left: 2rem;
+  outline: none;
 }
-
+.class-one{
+  text-decoration: line-through;
+}
+/* footer */
+footer{
+  background-color: var(--tropical-indigo);
+  color: var(--light-orange);
+  height: 4rem;
+}
 /* Account View */
