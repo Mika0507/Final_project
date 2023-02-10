@@ -29,6 +29,7 @@
         </div>
       </div>
      <button class="button" type="submit">Log In</button>
+     <div v-show="errorMsg">{{ errorMsg }}</div>
     </form>
 
     <!-- <form class="sign-in-form" @submit.prevent="signIn">
@@ -120,7 +121,7 @@ const signIn = async () => {
     }
     return;
   }
-  errorMsg.value = "error";
+  errorMsg.value = "Contraseña incorrecta, vuelve a intentarlo";
 };
 
 const showPassword = ref(false);

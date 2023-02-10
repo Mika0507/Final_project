@@ -5,7 +5,7 @@
       Home
     </router-link>
 
-    <ul>
+    <ul class="nav-bar">
         <li>
           <router-link to="/">Task Manager</router-link>
         </li>
@@ -64,23 +64,11 @@ const signOut = async () => {
 </script>
 
 <style>
-.navbar-img {
-  width: 90px;
-}
-
 nav {
-  background-color: lightgray;
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-}
-
-nav ul {
-  list-style: none;
-  padding-inline-start: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    background-color: rgb(107, 252, 70);
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
 </style>

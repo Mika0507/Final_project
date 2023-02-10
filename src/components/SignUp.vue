@@ -1,11 +1,10 @@
 <template>
   <div class="container">
-    <div class="header">
-      <div class="header-description">
+    
         <h3 class="header-title">Create an account</h3>
         <p class="header-subtitle">Start organizing your tasks!</p>
-      </div>
-    </div>
+      
+    
 
     <form @submit.prevent="signUp" class="form-component">
       <!-- Email -->
