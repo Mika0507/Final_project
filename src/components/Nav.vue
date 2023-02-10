@@ -1,11 +1,11 @@
 <template>
   <nav>
     <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
-    <router-link to="/">
+    <router-link to="/" class="link-home">
       Home
     </router-link>
 
-    <ul class="nav-bar">
+    <ul>
         <li>
           <router-link to="/">Task Manager</router-link>
         </li>
@@ -18,10 +18,10 @@
     <div>
       <ul>
         <li class="log-out-welcome">
-          <p>Welcome, user</p>
+          <p class="link-user-profile">User</p>
         </li>
-        <li>
-          <button @click="signOut" class="button">Log out</button>
+        <li  class="li-log-out-button">
+          <button  @click="signOut" class="button">Log out</button>
         </li>
       </ul>
     </div>
@@ -63,12 +63,4 @@ const signOut = async () => {
 
 </script>
 
-<style>
-nav {
-    background-color: rgb(107, 252, 70);
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-  }
-</style>
+<style></style>

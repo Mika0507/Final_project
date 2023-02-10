@@ -97,11 +97,16 @@
 }
 .button{
     background-color: var(--light-orange);
+    font-size: 1em;
     width: 100%;
     height: 2.85em;
     border-radius: 8px;
     border: none;
-    margin-bottom: 1rem;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: var(--cambridge-blue);
+    color: var(--colorWhite);
 }
 .sign-up-link{
     font-weight: 400;
@@ -124,17 +129,17 @@
 
 /* Barra de navegación */
 nav {
-    background-color: rgb(75, 139, 173);
+    background-color:var(--tropical-indigo);
+    color: var(--light-orange);
     display: flex;
     width: 100%;
+    height: 5rem;
     justify-content: space-around;
     align-items: center;
   }
-
   .navbar-img {
     width: 90px;
   }
-  
   nav ul {
     list-style: none;
     padding-inline-start: 0;
@@ -143,9 +148,17 @@ nav {
     align-items: center;
     gap: 2rem;
   }
-  a{
+  a, .link-user-profile{
+    color: var(--light-orange);
     text-decoration: none;
+    font-size: 1.25em;
+    font-weight: 300;
   }
-
-
+  a:hover{
+    color: var(--colorBlack);
+    font-weight: 400;
+  }
+  .li-log-out-button{
+    width: 6rem;
+  }
 /* Account View */
