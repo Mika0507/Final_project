@@ -42,7 +42,9 @@ A list of technologies used within the project:
 * [Technologie name](https://example.com): Version 2.34
 * [Library name](https://example.com): Version 1234
 
-
+<a href="https://www.flaticon.es/iconos-gratis/editar" title="editar iconos">Editar iconos creados por Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/delete" title="delete icons">Delete icons created by Good Ware - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/complete" title="complete icons">Complete icons created by manshagraphics - Flaticon</a>
 <!-- El formato Markdown permite crear viñetas de una lista no numerada con un asterisco (*) al principio de la línea.
 
 Se pueden insertar enlaces en cualquier ubicación del archivo readme.md. El procedimiento es muy similar al que se sigue con un archivo de imagen, solo que sin el signo de exclamación al principio de la línea. Escribe la palabra que se enlazará entre corchetes, seguida de la ruta al sitio web también entre corchetes (y sin espacios intercalados). -->

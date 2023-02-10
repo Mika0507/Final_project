@@ -1,25 +1,26 @@
 <template>
-  <div class="container">
+  <div class="container-new-tasks">
     <h3 :class="props.task.is_complete ? 'class-one' : 'class-two'">
       {{ task.title }}
     </h3>
     <p>{{  task.description }}</p>
-    <!-- <button @click="showModal = true">Delete {{ task.title }}</button> -->
+    <button class="button-class-edits-tasks delete" @click="showModal = true"></button>
     <!-- El modal emergente -->
-    <!-- <div class="modal" v-if="showModal">
+    <div class="modal" v-if="showModal">
       <h2>Are you sure??</h2>
       <p>No hay vuelta atrás</p>
       <button @click="deleteTask">Yes, I am</button>
-      <button @click="showModal=false">NO! Cancel, cancel</button>
-    </div> -->
-    <button @click="completeTask">Completed {{ task.title }}</button>
+      <button class="button-cancel-delete" @click="showModal=false">NO! Cancel, cancel</button>
+    </div>
+    <button class="button-class-edits-tasks completed" @click="completeTask"></button>
+    <button class="button-class-edits-tasks edit" @click="showInput"></button>
+     <div v-if="inputContainer">
+      <input type="text" v-model="currentTaskTitle" />
+      <input type="text" v-model="currentTaskDescription" />
+      <button class="button-class-edits-tasks edit-task" @click="editTask">Edit Task</button>
+    </div>
   </div>
-  <button @click="showInput">Edit</button>
-  <div v-if="inputContainer">
-    <input type="text" v-model="currentTaskTitle" />
-    <input type="text" v-model="currentTaskDescription" />
-    <button @click="editTask">Edit Task</button>
-  </div>
+  
 </template>
 
 <script setup>
@@ -76,23 +77,15 @@ const deleteTask = async () => {
   await taskStore.deleteTask(props.task.id);
 };
 
-const showModal = () => {
-
+const showModal = ref(false);
+const showModalToggle = () => {
+  showModal.value = !showModal.value;
 }
 </script>
 
 <style scoped>
 
-  .modal{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) ;
-    width: 20em;
-    height: 10em;
-    background: rgb(175, 175, 246);
-  }
-
+  
 </style>
 
 

@@ -7,8 +7,12 @@
       <router-link to="/account">Account</router-link>
     </div>
     <NewTask />
-    <h1>Tasks:</h1>
+    <h2>Tasks:</h2>
+    <section class="section-embrace-tasks">
+      
     <TaskItem v-for="task in tasks" :key="task.id" :task="task" @task-complete="completeTaskSupabase" @edit-child="editTaskSupabase"/>
+    </section>
+    
   </div>
 </template>
 
