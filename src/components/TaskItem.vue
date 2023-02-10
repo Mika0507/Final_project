@@ -14,7 +14,7 @@
     </div>
     <button class="button-class-edits-tasks completed" @click="completeTask"></button>
     <button class="button-class-edits-tasks edit" @click="showInput"></button>
-     <div v-if="inputContainer">
+     <div class="modal-task-edit" v-if="inputContainer">
       <input type="text" v-model="currentTaskTitle" />
       <input type="text" v-model="currentTaskDescription" />
       <button class="button-class-edits-tasks edit-task" @click="editTask">Edit Task</button>
