@@ -51,7 +51,8 @@ Se pueden insertar enlaces en cualquier ubicación del archivo readme.md. El pro
 
 
 
-
+***
+***
 ## Calendar
 #### Day One
 ***
@@ -67,7 +68,8 @@ Se pueden insertar enlaces en cualquier ubicación del archivo readme.md. El pro
 - [] CSS de la página Sign In/ Sign Up.
   
 El día de hoy lo he dedicado en gran medida a la creación de la lógica de los componentes de registro de usuario y de la creación de tareas. 
-
+***
+***
 #### Day Two
 ***
 ***
@@ -78,17 +80,30 @@ El día de hoy lo he dedicado en gran medida a la creación de la lógica de los
 - [x] Lógica del modal de confirmación para eliminar.
   
 Hoy planeo dedicarme a hacer el CSS de las pantallas del sign in y del home. Si da tiempo haré la lógica del modal. Hoy he conseguido hacer la lógica del modal y terminar el css de la página del Sign In, pero no he conseguido terminar el del sign up.
+***
+***
+#### Day Three
+***
+***
+###### Viernes 10, Febrero 2023
+***
+- [x] CSS Sign up.
+- [x] CSS del Home.
+- [] Tabla del profile.
+- [] lógica de la página del profile.
 
 #### Day Three
 ***
 ***
 ###### Viernes 10, Febrero 2023
 ***
-- [] CSS Sign up.
-- [] CSS del Home.
 - [] Tabla del profile.
 - [] lógica de la página del profile.
+- [] Mejorar detalles del CSS.
 
+El día de hoy voy a crear la página del profile. También voy a arreglar los pequeños detalles de CSS.
+***
+***
 ## Collaboration
 ***
 Give instructions on how to collaborate with your project.
