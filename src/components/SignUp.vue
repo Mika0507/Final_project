@@ -39,7 +39,7 @@
             id="confirm-password"
             v-model="confirmPassword"
           />
-          <button class="input-button">show</button>
+          <button @click.prevent="toggleShowPassword"  class="input-button">show</button>
         </div>
         <button class="button" type="submit">Sign Up</button>
         <p>
@@ -150,6 +150,14 @@ const signUp = async () => {
   }
   errorMsg.value = "error";
 };
+const showPassword = ref(false);
+
+const toggleShowPassword = () => {
+  showPassword.value = !showPassword.value
+  setTimeout(() => {
+    showPassword.value = !showPassword.value
+  }, 3000)
+}
 </script>
 
 <style></style>

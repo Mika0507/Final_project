@@ -2,20 +2,24 @@
  
   <template>
   <div class="container">
-    <h3 class="header-title">Welcome back! </h3>
+    <h3 class="header-title">Welcome back!</h3>
     <p class="header-subtitle">Please enter your details</p>
 
-     <form @submit.prevent="signIn" class="form-component">
+    <form @submit.prevent="signIn" class="form-component">
       <!-- Email -->
       <div class="parent-container-regular-input">
         <label for="email" class="input-field-label">Email</label>
-        <input class="input-regular-type" type="email" id="email" v-model="email">
+        <input
+          class="input-regular-type"
+          type="email"
+          id="email"
+          v-model="email"
+        />
       </div>
       <!-- Password -->
       <div class="parent-container-input-rigt-button">
         <label class="input-field-label" for="password">Password</label>
-        
-        <lottie-player v-if="showPassword" src="https://assets6.lottiefiles.com/packages/lf20_4yofoa5q.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop autoplay></lottie-player>
+
         <div class="input-button-right-container">
           <input
             :type="showPassword ? 'text' : 'password'"
@@ -25,11 +29,23 @@
             id="password"
             v-model="password"
           />
-          <button @click.prevent="toggleShowPassword" class="input-button">show</button>
+          <button @click.prevent="toggleShowPassword" class="input-button">
+            show
+          </button>
         </div>
+        <lottie-player
+        class="sandclock"
+          v-if="showPassword"
+          src="https://assets6.lottiefiles.com/packages/lf20_4yofoa5q.json"
+          background="transparent"
+          speed="1"
+          style="width: 50px; height: 50px"
+          loop
+          autoplay
+        ></lottie-player>
       </div>
-     <button class="button" type="submit">Log In</button>
-     <div v-show="errorMsg">{{ errorMsg }}</div>
+      <button class="button" type="submit">Log In</button>
+      <div v-show="errorMsg">{{ errorMsg }}</div>
     </form>
 
     <!-- <form class="sign-in-form" @submit.prevent="signIn">
@@ -127,11 +143,11 @@ const signIn = async () => {
 const showPassword = ref(false);
 
 const toggleShowPassword = () => {
-  showPassword.value = !showPassword.value
+  showPassword.value = !showPassword.value;
   setTimeout(() => {
-    showPassword.value = !showPassword.value
-  }, 3000)
-}
+    showPassword.value = !showPassword.value;
+  }, 3000);
+};
 </script>
 
 <style></style>

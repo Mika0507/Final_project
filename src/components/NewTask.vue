@@ -13,7 +13,7 @@
         />
       </div>
       <div>
-        <input class="input-field-add-task-description"
+        <textarea class="input-field-add-task-description"
           type="text"
           placeholder="Add a Task Description"
           v-model="description"
@@ -27,6 +27,8 @@
 <script setup>
 import { ref } from "vue";
 import { useTaskStore } from "../stores/task";
+// codigo para hacer crecer el input con el texto
+
 
 const taskStore = useTaskStore();
 

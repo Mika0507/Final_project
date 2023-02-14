@@ -25,22 +25,29 @@
         @click="completeTask"
       ></button>
       <button class="button-class-edits-tasks edit" @click="showInput"></button>
-      <div class="modal-task-edit" v-if="inputContainer">
-        <input type="text" v-model="currentTaskTitle" />
-        <input type="text" v-model="currentTaskDescription" />
-        <button class="button-class-edits-tasks edit-task" @click="editTask">
-          Edit Task
-        </button>
-      </div>
+    </div>
+    <div class="modal-task-edit" v-if="inputContainer">
+      <input type="text" v-model="currentTaskTitle" />
+      <textarea type="text" v-model="currentTaskDescription" />
+      <button class="button-class-edits-tasks edit-task" @click="editTask">
+        Edit Task
+      </button>
     </div>
   </div>
-  
 </template>
 
 <script setup>
 import { ref } from "vue";
 import { useTaskStore } from "../stores/task";
 import { supabase } from "../supabase";
+// para que el área de textarea se ajuste al texto que se le pone
+const textarea = document.querySelector("textarea");
+      textarea.addEventListener("keyup", e =>{
+        textarea.style.height = "6rem";
+        let scHeight = e.target.scrollHeight;
+        textarea.style.height = `${scHeight}px`;
+      });
+
 // definir emits para pasar lógica y eventos hacia componentes padres
 
 const emit = defineEmits(["taskComplete", "editChild"]);

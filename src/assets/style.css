@@ -43,7 +43,14 @@
   position: relative;
   margin: 0.5em 0 1.5rem 0;
 }
-
+.parent-container-input-rigt-button{
+  position: relative;
+}
+.sandclock{
+  position: absolute;
+  top: 1.3rem;
+  right: -3.5rem;
+}
 .input-button-right {
   width: 100%;
   height: 3em;
@@ -59,6 +66,7 @@
   width: 3.95em;
   height: 100%;
   border: none;
+  cursor: pointer;
 }
 
 .input-field-label {
@@ -72,7 +80,7 @@
   justify-content: space-evenly;
   align-items: center;
   gap: 0.85em;
-  height: 30em;
+  height: 36em;
   width: 30em;
   margin: 5em auto;
   box-shadow: -1px -1px 6px 0 #f1e3d3ff, 4px 4px 16px 2px #8e7dbeff;
@@ -84,6 +92,7 @@
 .container p {
   font-size: 1em;
   font-weight: 300;
+  margin-top: 1rem;
 }
 #email {
   width: 100%;
@@ -97,6 +106,7 @@
   font-size: 1em;
   width: 100%;
   height: 2.85em;
+
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -140,7 +150,6 @@ nav {
 }
 nav ul {
   list-style: none;
-  padding-inline-start: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -200,16 +209,16 @@ h2 {
   gap: 1rem;
   margin: 1rem;
 }
-.input-field-add-task {
+.input-field-add-task, .modal-task-edit input {
   width: 100%;
   height: 3rem;
-  padding-left: 1rem;
+  padding-left: 0.85rem;
   outline: none;
 }
-.input-field-add-task-description{
+.input-field-add-task-description, .modal-task-edit textarea{
   width: 100%;
   height: 6rem;
-  padding-left: 1rem;
+  padding: 1rem;
   outline: none;
 }
 .section-embrace-tasks {
@@ -226,7 +235,14 @@ h2 {
   gap: 2rem;
   width: 30rem;
   padding: 2rem;
+  margin: 3rem;
+  
   box-shadow: -1px -1px 6px 0 #f1e3d3ff, 4px 4px 16px 2px #8e7dbeff;
+}
+.container-new-tasks h3,
+.container-new-tasks p{
+  width: 100%;
+  word-wrap: break-word;
 }
 .content-buttons{
   display: flex;
@@ -287,6 +303,12 @@ h2 {
   width: 40rem;
   height: 20rem;
   background-color: var(--tropical-indigo);
+  border: 8px solid var(--cambridge-blue);
+  box-shadow:  10px 10px 2px -5px rgb(97, 97, 97);
+}
+/* pregutnar que es lo que está afectando que tengo que renombrar una acción que ya está declarada arriba, no funciona la importancia en cascada */
+.modal p{
+  text-align: center;
 }
 .modal button, .modal-task-edit button{
   background-color: var(--light-orange);
@@ -319,11 +341,11 @@ h2 {
   height: 15rem;
   padding-top: 1rem;
 }
-.modal-task-edit input{
+.modal-task-edit input, .modal-task-edit textarea{
   width: 80%;
-  height: 3rem;
-  padding-left: 2rem;
-  outline: none;
+}
+textarea::-webkit-scrollbar{
+  width: 0px;
 }
 .class-one{
   text-decoration: line-through;
