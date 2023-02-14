@@ -12,7 +12,7 @@
         @click="showModal = true"
       ></button>
       <!-- El modal emergente -->
-      <div class="modal" v-if="showModal">
+      <div class="modal blur-in" v-if="showModal">
         <h2>Are you sure??</h2>
         <p>No hay vuelta atrás</p>
         <button @click="deleteTask">Yes, I am</button>
@@ -24,9 +24,9 @@
         class="button-class-edits-tasks completed"
         @click="completeTask"
       ></button>
-      <button class="button-class-edits-tasks edit" @click="showInput"></button>
+      <button class="button-class-edits-tasks edit " @click="showInput"></button>
     </div>
-    <div class="modal-task-edit" v-if="inputContainer">
+    <div class="modal-task-edit bounce-top" v-if="inputContainer">
       <input type="text" v-model="currentTaskTitle" />
       <textarea type="text" v-model="currentTaskDescription" />
       <button class="button-class-edits-tasks edit-task" @click="editTask">
@@ -53,9 +53,15 @@ const textarea = document.querySelector("textarea");
 const emit = defineEmits(["taskComplete", "editChild"]);
 
 // funcion para completar tarea que se encarga de enviar la info al padre
-
+// import para traer la animación de confetti
+// import confetti from "https://cdn.skypack.dev/canvas-confetti";
 const completeTask = () => {
   // console.log("click");
+// función para generar la animación de confetti cuando presionas un botón hay que arreglarlo de manera que solo actúe con la presión del botón de complete
+//   confetti();
+// window.addEventListener("click", () => {
+//   confetti();
+// });
 
   emit("taskComplete", props.task);
 };
