@@ -1,6 +1,14 @@
 <template>
     <footer>
-        <div>Este div es provisional hasta que sepa que poner</div>
+        <div class="content-footer">
+            <h3>Follow Us</h3>
+            <div>
+                <a href="#"><img class="rrdd-icons" src="../../assets/icons/facebook.png" alt="facebook"></a>
+                <a href="#"><img class="rrdd-icons" src="../../assets/icons/gorjeo.png" alt="Twitter"></a>
+                <a href="#"><img class="rrdd-icons" src="../../assets/icons/linkedin.png" alt="Linkedin"></a>
+            </div>
+            <p>&#169 2022 ToDoTask. All rights reserved</p>
+        </div>
     </footer>
 </template>
 

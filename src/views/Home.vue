@@ -8,6 +8,7 @@
     </div>
     <NewTask />
     <h2>Tasks:</h2>
+    <img class="image-home" src="../../assets/image/imagehometask2.png" alt="image">
     <section class="section-embrace-tasks">
       
     <TaskItem v-for="task in tasks" :key="task.id" :task="task" @task-complete="completeTaskSupabase" @edit-child="editTaskSupabase"/>
