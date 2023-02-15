@@ -21,7 +21,7 @@
         </button>
       </div>
       <button
-        class="button-class-edits-tasks completed"
+        class="button-class-edits-tasks completed" 
         @click="completeTask"
       ></button>
       <button class="button-class-edits-tasks edit " @click="showInput"></button>
@@ -41,12 +41,20 @@ import { ref } from "vue";
 import { useTaskStore } from "../stores/task";
 import { supabase } from "../supabase";
 // para que el área de textarea se ajuste al texto que se le pone
-const textarea = document.querySelector("textarea");
+
+setTimeout(() => {
+    const textarea = document.querySelector("textarea");
       textarea.addEventListener("keyup", e =>{
         textarea.style.height = "6rem";
         let scHeight = e.target.scrollHeight;
         textarea.style.height = `${scHeight}px`;
-      });
+      
+      },
+      20
+    );
+  });
+
+
 
 // definir emits para pasar lógica y eventos hacia componentes padres
 
@@ -58,10 +66,10 @@ const emit = defineEmits(["taskComplete", "editChild"]);
 const completeTask = () => {
   // console.log("click");
 // función para generar la animación de confetti cuando presionas un botón hay que arreglarlo de manera que solo actúe con la presión del botón de complete
-//   confetti();
-// window.addEventListener("click", () => {
-//   confetti();
-// });
+  //   confetti();
+  // window.addEventListener("click", () => {
+  //   confetti();
+  // });
 
   emit("taskComplete", props.task);
 };

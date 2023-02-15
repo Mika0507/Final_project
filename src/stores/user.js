@@ -53,13 +53,13 @@ export const useUserStore = defineStore("user", {
       if (error) throw error;
       if (user) {
         this.user = user;
-        // const { data: profile } = await supabase
-        // .from('profiles')
-        // .select()
-        // .match({ user_id: this.user.id })
+        const { data: profile } = await supabase
+        .from('profiles')
+        .select()
+        .match({ user_id: this.user.id })
 
-        // if (profile) this.profile = profile[0];
-        // console.log('profile in store: ', profile);
+        if (profile) this.profile = profile[0];
+        console.log('profile in store: ', profile);
       }
     },
 

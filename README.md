@@ -101,7 +101,7 @@ Hoy planeo dedicarme a hacer el CSS de las pantallas del sign in y del home. Si 
 - [] lógica de la página del profile.
 - [x] Mejorar detalles del CSS.
 
-El día de hoy voy a crear la página del profile. También voy a arreglar los pequeños detalles de CSS.
+El día de hoy voy a crear la página del profile. También voy a arreglar los pequeños detalles de CSS. Al final de la jornada, no conseguí crear el profile, tengo problemas para conectar la tabla profile con la página web.
 ***
 ***
 #### Day Five
@@ -109,11 +109,22 @@ El día de hoy voy a crear la página del profile. También voy a arreglar los p
 ***
 ###### Martes 14, Febrero 2023
 ***
-- [] Tabla del profile, conectarlo con la página web.
+- [x] Tabla del profile, conectarlo con la página web.
 - [] lógica de la página del profile y/o aplicar CSS.
-- [] Mejorar detalles del CSS.
+- [x] Mejorar detalles del CSS.
 
-El día de ayer arreglé detalles del CSS que se debían mejorar y creé la tabla de profile en Supabase. Pero no he conseguido hacer que se conecte a los nuevos usuarios de la página, es decir, no parece estar conectado la tabla profile con la página web.
+El día de ayer arreglé detalles del CSS que se debían mejorar y creé la tabla de profile en Supabase. 
+***
+***
+#### Day Six
+***
+***
+###### Miércoles 15, Febrero 2023
+***
+- [] lógica de la página del profile y/o aplicar CSS.
+- [x] Mejorar detalles del CSS.
+
+El día de ayer arreglé detalles del CSS que se debían mejorar y creé la tabla de profile en Supabase. Hoy planeo arreglar la página del profile y aplicarle los estilos adecuados. Además me gustaría añadir a la página del home una image que veas cuando acabas de entrar y no tengas tareas aún creadas. 
 ***
 ***
 ## Collaboration
