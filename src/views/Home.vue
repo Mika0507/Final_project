@@ -8,7 +8,7 @@
     </div>
     <NewTask />
     <h2>Tasks:</h2>
-    <img class="image-home" src="../../assets/image/imagehometask2.png" alt="image">
+    <img v-if="taskArrayIsEmpty" class="image-home" src="../../assets/image/imagehometask2.png" alt="image">
     <section class="section-embrace-tasks">
       
     <TaskItem v-for="task in tasks" :key="task.id" :task="task" @task-complete="completeTaskSupabase" @edit-child="editTaskSupabase"/>
@@ -17,7 +17,7 @@
   </div>
   
 </template>
-
+<!-- v-if="tasks && tasks._rawValue && tasks._rawValue.length === 0" -->
 <script setup>
 import { ref, onUpdated } from 'vue';
 import { useTaskStore } from "../stores/task";
@@ -31,15 +31,16 @@ const taskStore = useTaskStore();
 
 // Variable para guardar las tareas de supabase
 const tasks = ref([]);
+let taskArrayIsEmpty = ref(tasks._rawValue.length === 0);
 
 // Creamos una función que conecte a la store para conseguir las tareas de supabase
 const getTasks = async() => {
   tasks.value = await taskStore.fetchTasks();
+  taskArrayIsEmpty.value = tasks._rawValue.length === 0;
 };
-
+console.log(tasks);
 getTasks();
 onUpdated(() => {
-
   getTasks();
 })
 

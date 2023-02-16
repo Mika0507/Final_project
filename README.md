@@ -123,10 +123,21 @@ El día de ayer arreglé detalles del CSS que se debían mejorar y creé la tabl
 ***
 - [] lógica de la página del profile y/o aplicar CSS.
 - [x] Mejorar detalles del CSS.
+- [x] Terminar el footer con los iconos y estilos.
 
 El día de ayer arreglé detalles del CSS que se debían mejorar y creé la tabla de profile en Supabase. Hoy planeo arreglar la página del profile y aplicarle los estilos adecuados. Además me gustaría añadir a la página del home una image que veas cuando acabas de entrar y no tengas tareas aún creadas. 
 ***
 ***
+#### Day Seven
+***
+***
+###### Jueves 16, Febrero 2023
+***
+- [] lógica de la página del profile y/o aplicar CSS.
+- [x] Mejorar detalles del CSS.
+- [x] Arreglar la aparición de la imagen en el home.
+- [] Crear las media query.
+
 ## Collaboration
 ***
 Give instructions on how to collaborate with your project.

@@ -3,26 +3,31 @@
     <Nav />
     <h1>Name: {{ username }}</h1>
     <!-- name. username. website. images -->
-
-    <form class="form-profile">
-      <!-- <label for="">Name</label>
+    <div class="content-form-profile">
+      <form class="form-profile">
+        <!-- <label for="">Name</label>
       <input type="text" /> -->
-      <label for="">User Name</label>
-      <input type="text" />
-      <label for="">Website</label>
-      <input type="url" />
-      <label for="">Image Avatar</label>
-      <input type="text" />
-      <img
-        :src="
-          avatar_url
-            ? avatar_url
-            : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'
-        "
-        alt="Profile picture"
-      />
-      <button>Accept Changes</button>
-    </form>
+        <label for="">User Name</label>
+        <input type="text" />
+        <label for="">Website</label>
+        <input type="url" />
+        <label for="">Image Avatar</label>
+        <div class="section-choose-avatar">
+          <input type="text" />
+          <img
+            class="image-profile"
+            :src="
+              avatar_url
+                ? avatar_url
+                : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'
+            "
+            alt="Profile picture"
+          />
+        </div>
+
+        <button>Accept Changes</button>
+      </form>
+    </div>
 
     <Footer />
   </div>
@@ -66,5 +71,4 @@ async function signOut() {
 </script>
 
 <style>
-
 </style>

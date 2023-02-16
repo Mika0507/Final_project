@@ -411,3 +411,28 @@ footer{
   width: 2.5rem;
 }
 /* Account View */
+.content-form-profile{
+  background-color: var(--cambridge-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  width: 26rem;
+}
+.form-profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+.image-profile{
+  width: 10rem;
+  border-radius: 50%;
+}
+
+/* -------------------------## Media Query ##----------------------- */
+
+@media (max-width: 766px){
+  
+}
