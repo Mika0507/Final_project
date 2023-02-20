@@ -1,19 +1,21 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper-profile">
     <Nav />
-    <h1>Name: {{ username }}</h1>
+    <h1>Name: <span>{{ username }}</span></h1>
     <!-- name. username. website. images -->
     <div class="content-form-profile">
       <form class="form-profile">
         <!-- <label for="">Name</label>
       <input type="text" /> -->
         <label for="">User Name</label>
-        <input type="text" />
+        <input class="input-profile" type="text" />
         <label for="">Website</label>
-        <input type="url" />
+        <input class="input-profile" type="url" />
         <label for="">Image Avatar</label>
         <div class="section-choose-avatar">
-          <input type="text" />
+          <button class="button-add-photo"></button>
+          <!-- hay que poner el input para poder cargar las imagenes desde el ordenador a la store de supabase -->
+          <!-- <input class="input-select-photo" type="file" /> -->
           <img
             class="image-profile"
             :src="
@@ -25,7 +27,7 @@
           />
         </div>
 
-        <button>Accept Changes</button>
+        <button class="button-accept-changes">Accept Changes</button>
       </form>
     </div>
 
