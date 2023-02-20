@@ -5,21 +5,21 @@
       Home
     </router-link>
 
-    <ul>
-        <li>
+  
+        <span>
           <router-link to="/">Task Manager</router-link>
-        </li>
+        </span>
 
-        <li>
+        <span>
           <router-link to="/account">Your Account</router-link>
-        </li>
-    </ul>
+        </span>
+    
 
-    <div>
+    <div class="nav-button-logout">
       <ul>
-        <li class="log-out-welcome">
+        <!-- <li class="log-out-welcome">
           <p class="link-user-profile">User</p>
-        </li>
+        </li> -->
         <li  class="li-log-out-button">
           <button  @click="signOut" class="button">Log out</button>
         </li>

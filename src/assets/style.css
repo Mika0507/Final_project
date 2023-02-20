@@ -180,12 +180,23 @@ nav {
 .navbar-img {
   width: 90px;
 }
-nav ul {
+nav span {
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+}
+.nav-button-logout ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+.link-home{
+  font-weight: 500;
+  margin: 0 1rem;
 }
 a,
 .link-user-profile {
@@ -488,10 +499,9 @@ h1 span{
     padding: 0 2rem;
     justify-content: space-between;
   }
-  nav ul{
+  nav span{
     display: none;
   }
- 
   h1{
     text-align: center;
     font-size: 3em;
@@ -511,6 +521,7 @@ h1 span{
   .section-embrace-tasks{
     width: 100%;
   }
+  /* modal delete */
   .modal{
     width: 100%;
   }
@@ -523,5 +534,9 @@ h1 span{
   }
   .modal-task-edit{
     width: 21rem;
+  }
+  /* profile page */
+  .content-form-profile{
+    width: 100%;
   }
 }
