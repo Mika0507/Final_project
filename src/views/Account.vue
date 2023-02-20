@@ -8,9 +8,9 @@
         <!-- <label for="">Name</label>
       <input type="text" /> -->
         <label for="">User Name</label>
-        <input class="input-profile" type="text" />
+        <input class="input-profile" type="text" placeholder="Escribe tu nombre de usuario" />
         <label for="">Website</label>
-        <input class="input-profile" type="url" />
+        <input class="input-profile" type="url" placeholder="Escribe tu URL" />
         <label for="">Image Avatar</label>
         <div class="section-choose-avatar">
           <button class="button-add-photo"></button>

@@ -137,6 +137,18 @@ El día de ayer arreglé detalles del CSS que se debían mejorar y creé la tabl
 - [x] Mejorar detalles del CSS.
 - [x] Arreglar la aparición de la imagen en el home.
 - [] Crear las media query.
+***
+***
+#### Day Eight
+***
+***
+###### Lunes 20, Febrero 2023
+***
+- [] lógica de la página del profile y/o aplicar CSS.
+- [x] Mejorar detalles del CSS.
+- [x] Crear las media query.
+***
+***
 
 ## Collaboration
 ***

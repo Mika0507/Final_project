@@ -443,6 +443,7 @@ h1 span{
   height: 2.85rem;
   border: none;
   outline: none;
+  padding-left: 1rem;
 }
 .button-add-photo{
   background-color: transparent;
@@ -455,11 +456,13 @@ h1 span{
   border: none;
   cursor: pointer;
 }
-.button-accept-changes:hover{
-  border: 4px solid var(--light-orange);
-  background-color: var(--cambridge-blue);
+.button-accept-changes{
+  background-color: var(--tropical-indigo);
   color: #ffffff;
-  font-weight: 500;
+}
+.button-accept-changes:hover{
+  background-color: var(--light-orange);
+  color: #1b1b1b;
 }
 .image-profile{
   width: 10rem;
