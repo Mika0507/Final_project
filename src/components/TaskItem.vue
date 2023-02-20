@@ -21,14 +21,14 @@
         </button>
       </div>
       <button
-        class="button-class-edits-tasks completed" 
+        class="button-class-edits-tasks completed"
         @click="completeTask"
       ></button>
-      <button class="button-class-edits-tasks edit " @click="showInput"></button>
+      <button class="button-class-edits-tasks edit" @click="showInput"></button>
     </div>
     <div class="modal-task-edit bounce-top" v-if="inputContainer">
       <input type="text" v-model="currentTaskTitle" />
-      <textarea type="text" v-model="currentTaskDescription" />
+      <textarea class="textareaTest" type="text" v-model="currentTaskDescription" />
       <button class="button-class-edits-tasks edit-task" @click="editTask">
         Edit Task
       </button>
@@ -42,19 +42,21 @@ import { useTaskStore } from "../stores/task";
 import { supabase } from "../supabase";
 // para que el área de textarea se ajuste al texto que se le pone
 
-setTimeout(() => {
-    const textarea = document.querySelector("textarea");
-      textarea.addEventListener("keyup", e =>{
-        textarea.style.height = "6rem";
-        let scHeight = e.target.scrollHeight;
-        textarea.style.height = `${scHeight}px`;
-      
-      },
-      20
-    );
+const getTextareas = () => {
+  setTimeout(() => {
+  const textarea = document.querySelectorAll("textarea");
+  console.log(textarea);
+  textarea.forEach((area) => {
+    area.addEventListener("keyup", (e) => {
+      console.log('estamos entrando en eventListener');
+      area.style.height = "6rem";
+      let scHeight = e.target.scrollHeight;
+      area.style.height = `${scHeight}px`;
+    });
   });
+}, 1000);}
 
-
+getTextareas();
 
 // definir emits para pasar lógica y eventos hacia componentes padres
 
@@ -65,7 +67,7 @@ const emit = defineEmits(["taskComplete", "editChild"]);
 // import confetti from "https://cdn.skypack.dev/canvas-confetti";
 const completeTask = () => {
   // console.log("click");
-// función para generar la animación de confetti cuando presionas un botón hay que arreglarlo de manera que solo actúe con la presión del botón de complete
+  // función para generar la animación de confetti cuando presionas un botón hay que arreglarlo de manera que solo actúe con la presión del botón de complete
   //   confetti();
   // window.addEventListener("click", () => {
   //   confetti();
@@ -89,6 +91,7 @@ const showInput = () => {
   inputContainer.value = !inputContainer.value;
   currentTaskTitle.value = props.task.title;
   currentTaskDescription.value = props.task.description;
+  getTextareas();
 };
 // funcion con validacion + envio de datos y eventos mediane emit
 const editTask = () => {

@@ -26,6 +26,19 @@ import Nav from '../components/Nav.vue';
 import NewTask from '../components/NewTask.vue';
 import TaskItem from '../components/TaskItem.vue';
 import Footer from '../components/Footer.vue'
+// ampliar input con texto
+/* setTimeout(() => {
+  const textarea = document.querySelectorAll("textarea");
+  console.log(textarea);
+  textarea.forEach((area) => {
+    area.addEventListener("keyup", (e) => {
+      console.log('estamos entrando en eventListener');
+      area.style.height = "6rem";
+      let scHeight = e.target.scrollHeight;
+      area.style.height = `${scHeight}px`;
+    });
+  });
+}, 20); */
 
 const taskStore = useTaskStore();
 
@@ -63,6 +76,8 @@ const editTaskSupabase = async(editTaskObject) => {
   console.log(editTaskObject);
   await taskStore.editTaskSupabase(editTaskObject.title, editTaskObject.id, editTaskObject.description)
 } 
+
+
 </script>
 
 <style></style>
